@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String city = "", ph = "", nh = "", water = "";
+  String city = "", ph = "", nh = "", pho = "";
   TextEditingController _locationController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
@@ -257,7 +257,7 @@ class _HomePageState extends State<HomePage> {
                                   borderSide:
                                       BorderSide(color: Colors.red, width: 1),
                                 ),
-                                labelText: "water content",
+                                labelText: "phosphorus content",
                               ),
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -267,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                                 }
                               },
                               onChanged: (value) {
-                                water = value;
+                                pho = value;
                               },
                             ),
                           ),
@@ -297,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                                         city: city,
                                         ph: ph,
                                         nh: nh,
-                                        water: water,
+                                        pho: pho,
                                       ),
                                     ),
                                   );

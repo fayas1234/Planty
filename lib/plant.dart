@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Plant extends StatefulWidget {
-  final String city, ph, nh, water;
+  final String city, ph, nh, pho;
 
   const Plant(
       {super.key,
       required this.city,
       required this.ph,
       required this.nh,
-      required this.water});
+      required this.pho});
 
   @override
   State<Plant> createState() => _PlantState();
@@ -28,7 +28,7 @@ class _PlantState extends State<Plant> {
               Text(widget.city),
               Text(widget.ph),
               Text(widget.nh),
-              Text(widget.water)
+              Text(widget.pho)
             ]),
           ),
         ),
